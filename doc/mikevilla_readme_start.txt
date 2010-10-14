@@ -1,10 +1,3 @@
-Loretta.Roslund@yoh.com
-Stephanie.Breeze@yoh.com
-
-
-maxime.curioni@gmail.com
-max@koda.us
-
 "GameStore App"
 by Mike Villa Sept 2010
 
