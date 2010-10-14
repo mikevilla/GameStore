@@ -1,0 +1,101 @@
+<p>
+  <b>Id:</b>
+  <%=h @game.id %>
+</p>
+
+<p>
+  <b>Publisher:</b>
+  <%=h @game.publisher_id %>
+</p>
+
+<p>
+  <b>Publisher Name (MIKE CREATION):</b>
+  <%= link_to(@game.publisher.name, @game.publisher) if @game.publisher %>
+</p>
+
+<p>
+  <b>Title:</b>
+  <%=h @game.title %>
+</p>
+
+<p>
+  <b>Platform Item is On:</b>
+  <%=h @game.item_platform %>
+</p>
+
+
+<p><b>Game was made for the following Platforms:</b> <br/>
+<% for each_platform in @game.platforms -%>
+        <%= each_platform.name  %> <br />
+<% end -%>
+<p/>
+
+<p>
+  <b>Category:</b>
+  <%=h @game.category %>
+</p>
+
+<p>
+  <b>Disc condition:</b>
+  <%=h @game.disc_condition %>
+</p>
+
+<p>
+  <b>Availability:</b>
+  <%=h @game.availability %>
+</p>
+
+<p>
+  <b>Esrb:</b>
+  <%=h @game.esrb %>
+</p>
+
+<p>
+  <b>Rating:</b>
+  <%=h @game.rating %>
+</p>
+
+<p>
+  <b>Price:</b>
+  <%=h @game.price %>
+</p>
+
+<p>
+  <b>Release date:</b>
+  <%=h @game.release_date %>
+</p>
+
+<p>
+  <b>Pre order date:</b>
+  <%=h @game.pre_order_date %>
+</p>
+
+<p>
+  <b>Created at:</b>
+  <%=h @game.created_at %>
+</p>
+
+<p>
+  <b>Updated at:</b>
+  <%=h @game.updated_at %>
+</p>
+
+<p>
+  <b>Image path:</b>
+  <%=h @game.image_path %>
+</p>
+
+<p>
+  <b>Edition:</b>
+  <%=h @game.edition_id %>
+</p>
+
+<p>
+  <b>Developer:</b>
+  <%=h @game.developer_id %>
+</p>
+
+
+
+<%= link_to 'Edit', edit_game_path(@game) %> |
+<%= link_to 'Back', games_path %>

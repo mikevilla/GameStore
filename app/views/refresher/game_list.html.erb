@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Game List</title>
+</head>
+
+<body>
+    SET of GAMES - LIST
+    <br/>
+    <br/>
+
+    <%= link_to('New Game', :action => 'new') %> <br/> <br/>
+
+    <% for game in @games -%>
+        ID: <%= game.id %><br />
+        PUBLISHER <%= game.publisher_id %><br /> 
+        TITLE: <%= link_to(game.title, :controller => 'public', :action => 'show', :id => game.id)-%><br />
+        PLATFORM: <%= game.platform %><br />
+        CATEGORY:<%= game.disc_condition %><br/>
+        AVAILABILITY: <%= game.availability %><br/>
+        ESRB: <%= game.esrb %><br />
+        RATING:<%= game.rating %><br/>
+        PRICE: <%= game.price %><br/>
+        RELEASE DATE: <%= game.release_date %><br/>
+
+    <% end %>
+
+
+
+    <br />
+    <br/>
+    DEBUG PARAMS <br/>
+    <%= debug(params) %>
+
+    <br />
+    <br />
+    <%= debug(@games) %>
+</body>
+</html>

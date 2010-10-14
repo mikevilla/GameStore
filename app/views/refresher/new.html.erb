@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>NEW Game</title>
+</head>
+
+<body>
+    New Game with form_tag () Going to Create<br/>
+    *** Note that the New View is Always EXPECTING and OBJECT to use to populate with before this starts ****
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <%= link_to('Cancel', :action => 'list')%>
+    <br/>
+    <br/>
+    <br/>
+
+    <!-- Note that start_form_tag was depracated!!
+    You need to remove the equal sign after the percent sign: -->
+
+    <!-- Note! This form (:action => create) is where the View hooks into the action create
+    method and passes it the new game infoin a paramater :game so it can be saved -->
+    <% form_tag(:action => 'create') do -%>
+
+        <%= error_messages_for(:game) %>
+        <br/>
+        <!-- :game is coming from the instance variable @game in this views controller which is
+         in the "new" controller so if there are default values set in the new method it will be
+         pasted in the following textfields
+
+         Once the "New Game" button is pressed the form populates the @game and sends to the create
+         method for it to be validated and saved to the database. -->
+        Publisher ID:   <%= text_field(:game, :publisher_id)  %>  <br/>
+        Edition ID:     <%= text_field(:game, :edition_id)  %>  <br/>
+        Developer ID:   <%= text_field(:game, :developer_id)  %>  <br/>
+        Title:          <%= text_field(:game, :title)  %>  <br/>
+        Platform:       <%= text_field(:game, :platform)  %> <br/>
+        category:       <%= text_field(:game, :category)  %>  <br/>
+        Disc Condition: <%= text_field(:game, :disc_condition)  %>  <br/>
+        Availability:   <%= text_field(:game, :availability)  %> <br/>
+        Esrb:           <%= text_field(:game, :esrb)  %>  <br/>
+        Rating:         <%= text_field(:game, :rating)  %> <br/>
+        Price:          <%= text_field(:game, :price)  %>  <br/>
+        Image Path:     <%= text_field(:game, :image_path)  %>  <br/>  
+        Release Date:   <%= datetime_select(:game, :release_date, :start_year => 1980)  %>   <br/><br/>
+        Pre-Order Date:   <%= datetime_select(:game, :pre_order_date, :start_year => 1980)  %>   <br/><br/>
+
+        <%= submit_tag("New Game") %>
+
+    <% end %>
+
+    
+
+
+    <br/>
+       DEBUG ERRORS LIST <br/>
+    <%= debug(@game.errors) %>
+
+    <br/>
+       DEBUG PARAMS <br/>
+    <%= debug(params) %>
+
+</body>
+</html>

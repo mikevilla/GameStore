@@ -1,0 +1,61 @@
+<h1>Listing games</h1>
+<h3><a href="/admin/menu">Administration Home Page</a></h3>
+
+<p>Game's LIST</p>
+
+<table>
+  <tr>
+    <th>Id</th>
+    <th>Publisher (ID)</th>
+    <th>Title</th>
+    <th>Platforms</th>
+    <th>Category</th>
+    <th>Disc condition</th>
+    <th>Availability</th>
+    <th>Esrb</th>
+    <th>Rating</th>
+    <th>Price</th>
+    <th>Release date</th>
+    <th>Pre order date</th>
+    <th>Created at</th>
+    <th>Updated at</th>
+    <th>Image path</th>
+    <th>Edition</th>
+    <th>Developer</th>
+  </tr>
+
+
+<% @games.each do |game| %>
+  <tr>
+    <td><%=h game.id %></td>
+    <td><%= link_to game.publisher.name, game.publisher %>(<%=h game.publisher_id %>) <br /></td>
+    <td><%= link_to game.title, game  %></td>
+
+    <td>
+    <% for each_platform in game.platforms -%>
+        <%=h each_platform.name %> <br />
+    <% end -%>
+    </td>
+    <td><%=h game.category %></td>
+    <td><%=h game.disc_condition %></td>
+    <td><%=h game.availability %></td>
+    <td><%=h game.esrb %></td>
+    <td><%=h game.rating %></td>
+    <td><%=h game.price %></td>
+    <td><%=h game.release_date %></td>
+    <td><%=h game.pre_order_date %></td>
+    <td><%=h game.created_at %></td>
+    <td><%=h game.updated_at %></td>
+    <td><%=h game.image_path %></td>
+    <td><%=h game.edition_id %></td>
+    <td><%=h game.developer_id %></td>
+    <td class="show"><%= link_to 'Show', game %></td>
+    <td class="edit"><%= link_to 'Edit', edit_game_path(game) %></td>
+    <td class="destroy"><%= link_to 'Destroy', game, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New game', new_game_path %>

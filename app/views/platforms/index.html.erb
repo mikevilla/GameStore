@@ -1,0 +1,27 @@
+<h1>Listing platforms</h1>
+<h3><a href="/admin/menu">Administration Home Page</a></h3>
+
+<table>
+  <tr>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Created at</th>
+    <th>Updated at</th>
+  </tr>
+
+<% @platforms.each do |platform| %>
+  <tr>
+    <td><%=h platform.id %></td>
+    <td><%= link_to platform.name, platform %></td>
+    <td><%=h platform.created_at %></td>
+    <td><%=h platform.updated_at %></td>
+    <td><%= link_to 'Show', platform %></td>
+    <td><%= link_to 'Edit', edit_platform_path(platform) %></td>
+    <td><%= link_to 'Destroy', platform, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New platform', new_platform_path %>

@@ -1,0 +1,25 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  id: 1 
+  name: Bungie
+  year_established: 1992
+  about: 'Bungie (founded as Bungie Software Products Corporation) is an American video game developer currently located in Bellevue, Washington, USA. The company was established in May 1991 by University of Chicago undergraduate student Alex Seropian, who later brought in programmer Jason Jones after publishing Jones game Minotaur: The Labyrinths of Crete.'
+  created_at: 2010-09-09 23:48:24
+  updated_at: 2010-09-09 23:48:24
+
+two:
+  id: 2
+  name: 2K Czech
+  year_established: 1997
+  about: 2K Czech (previously known as Illusion Softworks) is game development company located in Brno, Czech Republic. It was founded by Petr Vochozka and its venture capital investors, Cash Reform Group in 1997. The company focuses most on first-person shooters and third-person shooters games. As of November 2003, it had about 170 employees.
+  created_at: 2010-09-09 23:48:24
+  updated_at: 2010-09-09 23:48:24
+
+three:
+  id: 3
+  name: Blizzard
+  year_established: 1993
+  about: 'Blizzard Entertainment, Inc. is an American video game developer and publisher founded in February 1991 under the name Silicon & Synapse by three graduates of UCLA, Michael Morhaime, Allen Adham and Frank Pearce. Based in Irvine, California, the company originally concentrated primarily on the creation of game ports for other studios before beginning development of their own software in 1993 with the development of games like Rock N Roll Racing and The Lost Vikings. In 1994 the company became Blizzard Entertainment Inc before being acquired by distributor Davidson & Associates. Shortly thereafter, Blizzard shipped their breakthrough hit Warcraft: Orcs and Humans. Blizzard went on to create several successful PC games, including the Warcraft, Starcraft and Diablo series, and the MMORPG World of Warcraft.'
+  created_at: 2010-09-09 23:48:24
+  updated_at: 2010-09-09 23:48:24

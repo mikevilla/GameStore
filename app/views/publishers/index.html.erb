@@ -1,0 +1,31 @@
+<h1>Listing publishers</h1>
+<h3><a href="/admin/menu">Administration Home Page</a></h3>
+
+<table>
+  <tr>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Year established</th>
+    <th>About</th>
+    <th>Created at</th>
+    <th>Updated at</th>
+  </tr>
+
+<% @publishers.each do |publisher| %>
+  <tr>
+    <td><%=h publisher.id %></td>
+    <td><%= link_to publisher.name, publisher %></td>
+    <td><%=h publisher.year_established %></td>
+    <td><%=h publisher.about %></td>
+    <td><%=h publisher.created_at %></td>
+    <td><%=h publisher.updated_at %></td>
+    <td><%= link_to 'Show', publisher %></td>
+    <td><%= link_to 'Edit', edit_publisher_path(publisher) %></td>
+    <td><%= link_to 'Destroy', publisher, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New publisher', new_publisher_path %>

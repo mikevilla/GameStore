@@ -1,0 +1,23 @@
+<h1>Game Library Store</h1>
+
+<h2>Your Shopping Cart</h2>
+
+<table style="width: 500px; border-collapse: collapse;">
+
+<% for item in @cart -%>
+    <% row_color = cycle("CCCCCC", "FFFFFF")%>
+    <tr style="background: <%= row_color %>;">
+        <td rowspan="2"><%= image_tag(item.game.image_path,:size => '18x18')%></td>
+        <td>
+            <p style="font-size: 14pt;"><%= h(item.game.title)%></p>
+        </td>
+        <td>
+            <p style="font-size: 12px"><%= h(item.game.publisher.name) if item.game.publisher %> </p>
+        </td>
+        <td><%= item.quantity %></td>
+        <td><%= number_to_currency(item.price) %><br/> </td>
+
+    </tr>
+<% end -%>
+
+</table>

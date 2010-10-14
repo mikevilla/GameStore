@@ -1,0 +1,104 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  id: 1
+  publisher_id: 2
+  title: Fallout 3
+  item_platform: PS3
+  category: Role-Playing
+  disc_condition: New
+  availability: Usually Ships in 24 Hours
+  esrb: M
+  rating: 8.0
+  price: 59.99
+  release_date: 2008-06-02 03:49:00
+  pre_order_date: 2007-09-02 04:49:00
+  image_path: ps3/fallout_3.jpg
+  edition_id: 0
+  developer_id: 1
+
+two:
+  id: 2
+  publisher_id: 5
+  title: Mafia II
+  item_platform: PS3
+  category: Action
+  disc_condition: New
+  availability: Pre-order Ships 9/7/2010
+  esrb: T
+  rating: 9.8
+  price: 49.99
+  release_date: 2008-06-02 03:49:00
+  pre_order_date: 2007-09-02 04:49:00
+  image_path: xbox_360/mafia_ii.jpg
+  edition_id: 0
+  developer_id: 1
+
+three:
+  id: 4
+  publisher_id: 5
+  title: Halo Reach
+  item_platform: Xbox 360
+  category: First Person Shooter
+  disc_condition: Used
+  availability: Pre-order Ships 9/14/2010
+  esrb: E
+  rating: 9.9
+  price: 65.99
+  release_date: 2008-06-02 03:49:00
+  pre_order_date: 2007-09-02 04:49:00
+  image_path: xbox_360/halo_reach.jpg
+  edition_id: 0
+  developer_id: 2
+
+four:
+  id: 6
+  publisher_id: 2
+  title: NHL 11
+  item_platform: Xbox 360
+  category: Sports
+  disc_condition: New
+  availability: Pre-order Ships 9/7/2010
+  esrb: E
+  rating: 9.5
+  price: 89.99
+  release_date: 2010-09-07 00:01:00
+  pre_order_date: 2010-09-01 00:00:00
+  image_path: xbox_360/nhl11.jpg
+  edition_id: 0
+  developer_id: 3
+
+five:
+  id: 11
+  publisher_id: 5
+  title: Halo
+  item_platform: Xbox 360
+  category: First Person Shooter
+  disc_condition: Used
+  availability: Available
+  esrb: M
+  rating: 9.5
+  price: 19.99
+  release_date: 2005-09-13 02:58:00
+  pre_order_date: 2005-09-13 02:58:00
+  image_path: xbox_360/nhl11.jpg
+  edition_id: 0
+  developer_id: 2
+  remarks: 'This used product is guaranteed to work and may not include an instruction manual or original box.'
+
+Six:
+  id: 8
+  publisher_id: 4
+  title: 'Wipeout - The Game'
+  item_platform: Wii
+  category: Party
+  disc_condition: New
+  availability: Available
+  esrb: E
+  rating: 7.2
+  price: 29.99
+  release_date: 2010-09-08 05:34:00
+  pre_order_date: 2010-11-08 05:34:00
+  image_path: wii/wipeout.jpg
+  edition_id: 1
+  developer_id: 1

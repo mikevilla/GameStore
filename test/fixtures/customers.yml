@@ -1,0 +1,19 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  id: 1
+  first_name: Richard
+  last_name: Sterling
+  street: 701 Darcy Pkwy
+  city:   Lathrop
+  zip_code: 89034
+  country: USA
+
+two:
+  id: 2
+  first_name: Fred
+  last_name: McKnight
+  street: 2373 Lincoln Ave
+  city:   Hayward
+  zip_code: 94545
+  country: USA

@@ -1,0 +1,38 @@
+<p>
+  <b>Id:</b>
+  <%=h @publisher.id %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%=h @publisher.name %>
+</p>
+
+<p>
+  <b>Year established:</b>
+  <%=h @publisher.year_established %>
+</p>
+
+<p>
+  <b>About:</b>
+  <%=h @publisher.about %>
+</p>
+
+<p>
+  <b>Created at:</b>
+  <%=h @publisher.created_at %>
+</p>
+
+<p>
+  <b>Updated at:</b>
+  <%=h @publisher.updated_at %>
+</p>
+
+<p><strong>List of all games this Publisher has created:</strong><br/>
+<% @publisher.games.each do |game| %> <br/>
+    <em><%= game.title  %></em>
+<% end %>
+</p>
+
+<%= link_to 'Edit', edit_publisher_path(@publisher) %> |
+<%= link_to 'Back', publishers_path %>

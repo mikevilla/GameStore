@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>SHOW ONE GAME</title>
+</head>
+
+<body>
+    SHOW ONE GAME <br />
+    <%= link_to('Back', :action => 'list')%>
+    <br/>
+    <br/>
+
+        <% if @game != nil -%>
+            GAME ID: <%= @game.id %><br />
+            TITLE: <%= link_to(@game.title, :controller => 'refresher', :action => 'show', :id => @game.id)-%><br />
+            PUBLISHER ID <%= @game.publisher_id %><br />
+            PUBLISHER NAME (comes from Daisy Chain): <%= link_to(@game.publisher.name, @game.publisher) %> <br/>
+            PUBLISHER HAS THE FOLLOWING GAME TITLEs: <br />
+                        <% for game in @game.publisher.games -%>
+                                ----------- <%= game.title %> <br />
+                        <% end %>
+            PLATFORM: <%= @game.item_platform %><br />
+            CATEGORY:<%= @game.disc_condition %><br/>
+            AVAILABILITY: <%= @game.availability %><br/>
+            ESRB: <%= @game.esrb %><br />
+            RATING:<%= @game.rating %><br/>
+            PRICE: <%= @game.price %><br/>
+            RELEASE DATE: <%= @game.release_date %><br/>
+
+        <% else %>
+            Sorry No Game Found
+        <% end %>
+
+    <%= link_to('Edit', :action => 'edit', :id => @game.id)%> |
+
+    <!-- Note that the curly braces are now required so that link_to knows that whats inside of the braces
+         is what is going to be in the url. Its required now because we have a confirm javascript popup
+         that is invoked with :confirm
+    -->
+    <%= link_to('Delete', {:action => 'destroy', :id => @game.id}, :confirm => 'Are you sure?')%>
+
+
+
+
+    <br />
+    <br />
+       DEBUG PARAMS <br/>
+       (CONTENTS OF WHAT WAS RECEIVED) <br/>
+    <%= debug(params) %>
+
+    <br/>
+    <br />
+    HERE's WHAT IS INSIDE ONE @GAME
+    <%= debug(@game) %>
+
+
+
+</body>
+</html>

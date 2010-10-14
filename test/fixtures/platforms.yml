@@ -1,0 +1,38 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  id: 1
+  name: PS3
+
+
+two:
+  id: 2
+  name: Xbox 360
+
+three:
+  id: 3
+  name: Wii
+
+four:
+  id: 4
+  name: DS
+
+five:
+  id: 5
+  name: PS2
+
+six:
+  id: 6
+  name: PSP
+
+seven:
+  id: 7
+  name: PC Games
+
+eight:
+  id: 28
+  name: Xbox
+
+nine:
+  id: 9
+  name: iPhone

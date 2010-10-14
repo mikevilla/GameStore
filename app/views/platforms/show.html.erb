@@ -1,0 +1,32 @@
+<p>
+  <b>Id:</b>
+  <%=h @platform.id %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%=h @platform.name %>
+</p>
+
+
+<p>
+  <b>Games that are on this Platform:</b><br />
+
+  <% for game in @platform.games  -%>
+      *<strong><%= link_to(game.title, game) %></strong> and was Published by <strong><em><%= link_to(game.publisher.name, game.publisher) %></em></strong></strong> <br />
+  <% end %>
+</p>
+
+<p>
+  <b>Created at:</b>
+  <%=h @platform.created_at %>
+</p>
+
+<p>
+  <b>Updated at:</b>
+  <%=h @platform.updated_at %>
+</p>
+
+
+<%= link_to 'Edit', edit_platform_path(@platform) %> |
+<%= link_to 'Back', platforms_path %>

@@ -1,0 +1,27 @@
+development:
+  adapter: mysql
+  encoding: utf8
+  database: gamestore_development
+  username: mvilla
+  password: "&mvilla"
+
+test:
+  adapter: mysql
+  database: game_site_test
+  username: mvilla
+  password: "&mvilla"
+  timeout: 5000
+
+staging:
+  adapter: mysql
+  database: game_site_staging
+  username: mvilla
+  password: "&mvilla"
+  timeout: 5000
+
+production:
+  adapter: mysql
+  database: game_site_production
+  username: mvilla
+  password: "&mvilla"
+  timeout: 5000

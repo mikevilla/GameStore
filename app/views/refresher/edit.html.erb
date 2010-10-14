@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Edit Game</title>
+</head>
+
+<body>
+    Edit Game<br/>
+    *** Note that the Edit View is Always EXPECTING and OBJECT to use to populate with before this starts ****
+    <br/>
+    <br/>
+
+    <br />
+    <br />
+    <%= link_to('Cancel', :action => 'list')%>
+    <br/>
+    <br/>
+    <br/>
+
+    <!-- Note that start_form_tag was deprecated!!
+    You need to remove the equal sign after the percent sign: -->
+
+    <!-- note that the id comes into this page from the url then we need to pass along that
+    same id to the next action which is the update method. you do this by using the form. The form
+    will take use the :id symbol to pass this along. -->
+
+    <% form_tag(:action => 'update', :id => @game.id) do -%>
+        <%= error_messages_for(:game) %>
+        <br/>
+        Publisher ID:   <%= text_field(:game, :publisher_id)  %>  <br/>
+        Title:          <%= text_field(:game, :title)  %>  <br/>
+        Platform (Legacy): <%= text_field(:game, :item_platform)  %> <br/>
+        category:       <%= text_field(:game, :category)  %>  <br/>
+        Disc Condition: <%= text_field(:game, :disc_condition)  %>  <br/>
+        Availability:   <%= text_field(:game, :availability)  %> <br/>
+        Esrb:           <%= text_field(:game, :esrb)  %>  <br/>
+        Rating:         <%= text_field(:game, :rating)  %> <br/>
+        Price:          <%= text_field(:game, :price)  %>  <br/>
+        Release Date:   <%= datetime_select(:game, :release_date, :start_year => 1980)  %>   <br/><br/>
+        Pre-Order Date:   <%= datetime_select(:game, :pre_order_date, :start_year => 1980)  %>   <br/><br/>
+
+        <%= submit_tag("Save Game") %>
+
+    <% end %>
+
+
+       DEBUG PARAMS <br/>
+    <%= debug(params) %>
+
+</body>
+</html>

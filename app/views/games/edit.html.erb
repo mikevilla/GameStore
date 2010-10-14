@@ -1,0 +1,110 @@
+<h1>Editing game</h1>
+
+<% form_for(@game) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :id %><br />
+    <%= f.text_field :id %>
+  </p>
+  <p>
+    <%= f.label "LEGACY PUBLISHER" %><br />
+    <%= f.text_field :publisher_id %>
+  </p>
+  <p>
+    <%= f.label "Choose the Publisher" %><br />
+    <%= f.select('publisher_id', options_for_select([['Choose one...', '']] + @publishers.collect {|pub| [pub.name, pub.id]}, @game.publisher_id))%><br />
+    
+    <!-- This collects all of the values in the @publishers instance and puts it in a select box, also
+     adds a "Choose one.." entry for the first element in the array [0] -->
+  </p>
+  <p>
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label "Platform this Item is on" %><br />
+    <%= f.text_field :item_platform %>
+  </p>
+
+  <p>
+    <%= f.label "Platform LIST x" %><br /> <br />
+    <% for each_platform in @platforms -%>
+
+        <!-- this will determine whether or not the checkbox is going to be checked or not -->
+        <%= check_box_tag('platform_list[]', each_platform.id, @game.platforms.collect {|obj| obj.id}.include?(each_platform.id)) %> <%= each_platform.name  %> <br />
+    <% end -%>
+  </p>
+
+
+  
+  <p>
+    <%= f.label :category %><br />
+    <%= f.text_field :category %>
+  </p>
+  <p>
+    <%= f.label :disc_condition %><br />
+    <%= f.text_field :disc_condition %>
+  </p>
+  <p>
+    <%= f.label :availability %><br />
+    <%= f.text_field :availability %>
+  </p>
+  <p>
+    <%= f.label :esrb %><br />
+    <%= f.text_field :esrb %>
+  </p>
+  <p>
+    <%= f.label :rating %><br />
+    <%= f.text_field :rating %>
+  </p>
+  <p>
+    <%= f.label :price %><br />
+    <%= f.text_field :price %>
+  </p>
+  <p>
+    <%= f.label :release_date %><br />
+    <%= f.datetime_select :release_date %>
+  </p>
+  <p>
+    <%= f.label :pre_order_date %><br />
+    <%= f.datetime_select :pre_order_date %>
+  </p>
+  <p>
+    <%= f.label :created_at %><br />
+    <%= f.datetime_select :created_at %>
+  </p>
+  <p>
+    <%= f.label :updated_at %><br />
+    <%= f.datetime_select :updated_at %>
+  </p>
+  <p>
+    <%= f.label :image_path %><br />
+    <%= f.text_field :image_path %>
+  </p>
+  <p>
+    <%= f.label :edition_id %><br />
+    <%= f.text_field :edition_id %>
+  </p>
+  <p>
+    <%= f.label :developer_id %><br />
+    <%= f.text_field :developer_id %>
+  </p>
+  <p>
+
+    <!-- YOU HAVE ALL OF THE INFOR FOR A NEW GAME SO PASS IT TO UDATE   ->
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @game %> |
+<%= link_to 'Back', games_path %>
+
+    <br />
+
+    DEBUG PARAMS <br/>
+    <%= debug(params) %>
+
+    <br />
+    <br />
+    <%= debug(@games) %>

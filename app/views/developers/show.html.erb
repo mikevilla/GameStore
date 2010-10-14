@@ -1,0 +1,39 @@
+<h2>SHOW Developer</h2>
+<h3><a href="/admin/menu">Administration Home Page</a></h3>
+<%= link_to 'Edit', edit_developer_path(@developer) %> |
+<%= link_to 'Back', developers_path %>
+
+<br/>
+<br/>
+
+<p>
+  <b>Id:</b>
+  <%=h @developer.id %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%=h @developer.name %>
+</p>
+
+<p>
+  <b>Year established:</b>
+  <%=h @developer.year_established %>
+</p>
+
+<p>
+  <b>About:</b>
+  <%=h @developer.about %>
+</p>
+
+<p>
+  <b>Created at:</b>
+  <%=h @developer.created_at %>
+</p>
+
+<p>
+  <b>Updated at:</b>
+  <%=h @developer.updated_at %>
+</p>
+
+

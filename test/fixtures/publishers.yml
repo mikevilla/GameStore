@@ -1,0 +1,50 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  id: 1 
+  name: Blizzard Entertainment
+  year_established: 1994
+  about: 'Blizzard Entertainment¨ is a premier developer and publisher of entertainment software. After establishing the Blizzard Entertainment label in 1994, the company quickly became one of the most popular and well-respected makers of computer games. By focusing on creating well-designed, highly enjoyable entertainment experiences, Blizzard Entertainment has maintained an unparalleled reputation for quality since its inception.'
+  created_at: 2010-09-08 03:06:35
+  updated_at: 2010-09-08 03:06:35
+
+two:
+  id: 2
+  name: Electronic Arts
+  year_established: 1982
+  about: 'Electronic Arts Inc. is a leading global interactive entertainment software company. EA develops, publishes, and distributes interactive software worldwide for video game systems, personal computers, wireless devices and the Internet.'
+  created_at: 2010-09-08 03:06:35
+  updated_at: 2010-09-08 03:06:35
+
+three:
+  id: 3
+  name: Nintendo
+  year_established: 1985
+  about: 'Nintendo Entertainment System Introduced in 1985, the NES was an instant hit. Over the course of the next two years, it almost single-handedly revitalized the video game industry. Selling over 60 million units, people brought games like Mario and Zelda into their homes for the first time on the NES.'
+  created_at: 2010-09-08 03:06:35
+  updated_at: 2010-09-08 03:06:35
+
+
+four:
+  id: 4
+  name: Ubisoft
+  year_established: 1986
+  about: 'Ubisoft Entertainment S.A, an educational software and video game publishing and distribution company, is created by the five Guillemot brothers. Growing success with a series of hits on PC, Amstrad?, Atari? and Amiga? and first distribution partnerships with the leading U.S. and European video game publishers : Elite?, Electronic Arts, Sierra, LucasArts?, Novalogic¨?'
+  created_at: 2010-09-08 03:06:35
+  updated_at: 2010-09-08 03:06:35
+
+five:
+  id: 5
+  name: Take-Two Interactive
+  year_established: 1999
+  about: 'Take-Two Interactive Software, Inc. is a leading worldwide publisher and developer of interactive entertainment software. Take-Two product offerings include titles for the leading hardware platforms - PlayStation¨3 and PlayStation¨2 computer entertainment systems, PSP¨ (PlayStation¨Portable) system, Xbox 360¨ video game and entertainment system from Microsoft, Wii?, Nintendo DS? and for the PC. The Company publishes and develops products through its wholly owned labels Rockstar Games and 2K, which publishes its titles under 2K Games, 2K Sports and 2K Play.'
+  created_at: 2010-09-08 03:06:35
+  updated_at: 2010-09-08 03:06:35
+
+six:
+  id: 7
+  name: Microsoft Games Studios
+  year_established: 2002
+  about: 'Microsoft Game Studios is a brand owned by Microsoft and introduced in 2002 to represent the company as a video game publisher, coinciding with the launch of the Xbox. Games published by Microsoft under the MGS label are typically released for the Windows and/or Xbox (360) platforms exclusively, regardless of whether the developer is a first or third party.'
+  created_at: 2010-09-08 03:06:35
+  updated_at: 2010-09-08 03:06:35

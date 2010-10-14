@@ -1,0 +1,55 @@
+<% @page_title = 'Checkout' %>
+
+<h1>Game Store</h1>
+
+<h2>Receipt</h2>
+
+<%= link_to('Continue Shopping', :action => 'index') %>
+
+<br/>
+<br/>
+<br/>
+
+<table style="width: 600px; border-collapse: collapse;">
+    <tr>
+        <td height="20"></td>
+        <td height="20">Title</td>
+        <td height="20">Publisher</td>
+        <td height="20">Qty</td>
+        <td height="20">Price</td>
+    </tr>
+<% for item in @cart.items -%>
+    <% row_color = cycle("CCCCCC", "FFFFFF")%>
+    <tr style="background: <%= row_color %>;">
+        <td height="60"><%= image_tag(item.game.image_path, :size => '37x50') %></td>
+        <td height="60"><%= h(item.game.title)%></td>
+        <td height="60"><%= h(item.game.publisher.name) if item.game.publisher %></td>
+        <td height="60"><%= item.quantity %></td>
+        <td height="60"><%= number_to_currency(item.price) %> | 
+        <%= link_to('remove', {:action => 'remove_from_cart',  :id => item.game.id}, :confirm => 'Are you sure you want to remove an item from cart?') %></td>
+    </tr>
+<% end -%>
+
+</table>
+
+
+<p><strong>Total Price: <%=  number_to_currency(@cart.total_price) %></strong>   |   <%= link_to('Empty Cart', {:action => 'empty_cart'}, :confirm => 'Are you sure you want to remove all contents from your cart?') %>
+</p>
+
+
+<hr/>
+<br/>
+
+
+
+<br/>
+<br/>
+    <br />
+       DEBUG PARAMS <br/>
+       (CONTENTS OF WHAT WAS RECEIVED) <br/>
+    <%= debug(params) %>
+
+    <br/>
+    <br />
+    HERE's WHAT IS INSIDE ONE @CART
+    <%= debug(@cart) %>

@@ -1,0 +1,51 @@
+<% @page_title = 'Game Search' %>
+
+<h3>Public VIEW games</h3>
+
+<h3><a href="/admin/menu">Administration Home Page</a></h3>
+
+<br/>
+
+
+<%= link_to('View Cart', :action => 'show_cart') %>
+
+<% for game in @games %>
+<% row_color = cycle("CCCCCC", "FAFAFA")%>
+
+<table width="800" border="1" cellspacing="1" cellpadding="1">
+<tr style="background: <%= row_color %>;">
+    <td width="70" rowspan="4"><%= image_tag(game.image_path, :size => '53x75') %></td>
+    <td colspan="5">  <b> <%= link_to game.title, game %></b></td>
+  </tr>
+  <tr>
+    <td width="30" rowspan="3">
+                    <% esrb = game.esrb
+
+                       case esrb
+                               when "E" %> <%= image_tag("esrb/esrb_search_e10.gif", :size => '35x49') %>
+                           <%  when "T" %> <%= image_tag("esrb/esrb_search_t.gif", :size => '35x49') %>
+                           <%  when "M" %> <%= image_tag("esrb/esrb_search_m.gif", :size => '35x49') %>
+                           <%  when "RP" %> <%= image_tag("esrb/esrb_search_rp.gif", :size => '35x49') %>
+                     <% end %></td>
+    <td width="300" rowspan="3">
+        Platform:   <%=h game.item_platform %><br/>
+        Publisher:  <%= link_to game.publisher.name, game.publisher %> <br/>
+        Category:   <%=h game.category %> <br/>    				</td>
+    <td width="200"><% if game.disc_condition == 'New' %> <%= image_tag("buttons/new.jpg", :size => '54x63') %>
+                               <% elsif game.disc_condition == 'Used' %> <%= image_tag("buttons/preowned.jpg", :size => '45x45') %>
+    <% end  %></td>
+    <td width="200"><%=h my_currency_helper(game.price) %></td>
+    <td width="200"><%= link_to(image_tag("buttons/add_to_cart.png", :size => '80x25'), :action => 'add_to_cart', :id => game.id) %></td>
+  </tr>
+  <tr>
+    <td colspan="2"><b><%= game.availability %></b></td>
+    <td>Released: <%= game.release_date.strftime("%d/%m/%Y") %></td>
+  </tr>
+  <tr>
+    <td colspan="3"><%= game.remarks if game.remarks %></td>
+  </tr>
+</table>
+<% end -%>
+
+<br/>
+
