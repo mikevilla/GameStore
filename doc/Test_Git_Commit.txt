@@ -1,3 +1,3 @@
 This is a Test File for Committing to Git
-
+Commit for gs_rails3
 In RAILS 3
