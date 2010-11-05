@@ -9,16 +9,22 @@
       </configuration>
     </facet>
   </component>
-  <component name="GemRequirementsHolder" version="2">
+  <component name="GemRequirementsHolder" version="3">
     <requirement>
       <requirement>
-        <dependency name="mysql" version="0" bound="GREATER_OR_EQUAL" />
+        <dependency name="mysql" version="0" bound="GREATER_OR_EQUAL" git="false" path="false" doRequire="true" />
       </requirement>
       <source from="config/database.yml" />
     </requirement>
     <requirement>
       <requirement>
-        <dependency name="rails" version="0" bound="GREATER_OR_EQUAL" />
+        <dependency name="rails" version="2.3.5" bound="EQUAL" git="false" path="false" doRequire="true" />
+      </requirement>
+      <source from="config/environment.rb" />
+    </requirement>
+    <requirement>
+      <requirement>
+        <dependency name="rails" version="0" bound="GREATER_OR_EQUAL" git="false" path="false" doRequire="true" />
       </requirement>
       <source from="config/boot.rb" />
     </requirement>
