@@ -10,7 +10,7 @@
 
 <p>
   <b>Publisher Name (MIKE CREATION):</b>
-  <%= link_to(@game.publisher.name, @game.publisher) if @game.publisher %>
+  <%= link_to(@game.publisher.name , @game.publisher) if @game.publisher %>
 </p>
 
 <p>
@@ -28,7 +28,7 @@
 <% for each_platform in @game.platforms -%>
         <%= each_platform.name  %> <br />
 <% end -%>
-<p/>
+</p>
 
 <p>
   <b>Category:</b>

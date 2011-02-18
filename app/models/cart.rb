@@ -19,6 +19,7 @@ class Cart
   def add_game ( game_item )
 
   # Check to see if the the item to be added already exists in the list.
+  # Note that this is not a Rails find but a Ruby find to search an array for the same game_item
   existing_item = @items.find {|item| item.game_id == game_item.id}  
 
   # Check to see if we have the same item in the cart and if so then just add to the qty.
