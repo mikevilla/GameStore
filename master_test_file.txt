@@ -1,2 +1,3 @@
+MASTER
 This is a text file that is in the master branch.
 Test Master Commit Now
